@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="refresh" content="5">
+</head>
+<body>
+
+<canvas id="myCanvas" width="1000px" height="1000px" style="border:1px solid #d3d3d3; padding: 50px;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+  var c = document.getElementById('myCanvas');
+  var ctx = c.getContext('2d');
+
+   // begin custom shape
+      ctx.beginPath();
+      ctx.moveTo(20, 20);
+
+      ctx.quadraticCurveTo(20,100,100,20);
+
+      // complete custom shape
+      ctx.closePath();
+      ctx.lineWidth = 5;
+      ctx.strokeStyle = 'blue';
+      ctx.stroke();
+
+</script>
+
+</body>
+</html>
